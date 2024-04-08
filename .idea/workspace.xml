@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a20d308e-2e60-4385-b799-0842d52fe34f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/BLAISY_PAYSAGE_Noir.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/BLAISY_PAYSAGE_Rose.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/Layout.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="a20d308e-2e60-4385-b799-0842d52fe34f" name="Changes" comment="test ios">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,12 +108,42 @@
       <option name="presentableId" value="Default" />
       <updated>1709564119014</updated>
       <workItem from="1709564120083" duration="1481000" />
-      <workItem from="1712574846808" duration="2016000" />
+      <workItem from="1712574846808" duration="5371000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1712577088737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712577088737</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1712577097481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712577097481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test ios">
+      <option name="closed" value="true" />
+      <created>1712577384709</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712577384709</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="test ios" />
+    <option name="LAST_COMMIT_MESSAGE" value="test ios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
