@@ -16,11 +16,11 @@ const optimizedImage = await getImage({
   <link rel="preload" href={optimizedImage.src} as="image" />
 </Fragment>
 
-<Layout title="Blaisy Records">
+<Layout title="Blaisy Records" watermark>
   <main>
-    <div class="wrapper" transition:name="bubble">
+    <a href="/home" class="wrapper" transition:name="bubble">
       <Image src={logo} alt="Blaisy Records logo" />
-    </div>
+    </a>
 
     <h1 transition:animate={fade({ duration: "1s" })}>Merch</h1>
   </main>
