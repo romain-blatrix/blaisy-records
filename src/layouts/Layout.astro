@@ -31,25 +31,30 @@ const logoClass = watermark ? "watermark" : "";
     <style is:global>
       :root {
       }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
       html {
         font-family: system-ui, sans-serif;
         background: #ffffff;
-        background-size: 224px;
-        height: 100%;
-        width: 100%;
+        box-sizing: border-box;
       }
       body {
-        margin: 0;
-        padding: 0;
-
-        height: 100%;
-        width: 100%;
+        min-height: 100dvh;
+        padding: 5vh 5vw;
 
         background: black;
         font-family: "Monoton", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
       }
       .watermark {
         background-image: url(../../public/logo_text_darken.png);

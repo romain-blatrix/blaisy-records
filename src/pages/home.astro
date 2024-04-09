@@ -1,29 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import LogoImage from "../components/LogoImage.astro";
 import { fade } from "astro:transitions";
-
-import logo from "../../public/logo.png";
-import { getImage } from "astro:assets";
-
-const optimizedImage = await getImage({
-  src: logo,
-  format: "webp",
-});
 ---
-
-<Fragment slot="head">
-  <link rel="preload" href={optimizedImage.src} as="image" />
-</Fragment>
 
 <Layout title="Blaisy Records">
   <main>
-    <div class="wrapper" transition:name="bubble">
-      <Image src={logo} alt="Blaisy Records logo" />
-    </div>
+    <LogoImage />
 
     <nav transition:animate={fade({ duration: "1s" })}>
       <a href="/merch">Merch</a>
+      <a href="/about">About</a>
     </nav>
   </main>
 </Layout>
@@ -43,27 +30,24 @@ const optimizedImage = await getImage({
 
 <style>
   main {
-    padding: 5vh 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     gap: 40px;
   }
-  .wrapper {
-    background-color: white;
-    aspect-ratio: 1 / 1;
-    width: 150px;
-    height: 150px;
-    border-radius: 500px;
-    padding: 16px;
-  }
-  img {
-    width: 100%;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     height: 100%;
+    gap: 40px;
   }
   nav a {
     color: white;
-    font-size: clamp(20px, 5vw, 50px);
+    font-size: 50px;
     font-weight: 400;
   }
 </style>

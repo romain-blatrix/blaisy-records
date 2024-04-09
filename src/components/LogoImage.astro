@@ -1,0 +1,55 @@
+---
+interface Props {
+  fixed?: boolean;
+  linkToHome?: boolean;
+}
+
+import { Image } from "astro:assets";
+
+import logo from "../../public/logo.png";
+import { getImage } from "astro:assets";
+
+const optimizedImage = await getImage({
+  src: logo,
+  format: "webp",
+});
+
+const { fixed, linkToHome } = Astro.props;
+---
+
+<Fragment slot="head">
+  <link rel="preload" href={optimizedImage.src} as="image" />
+</Fragment>
+
+{linkToHome ? (
+  <a href="/home" class=`wrapper ${fixed ? 'fixed' : ''}` transition:name="bubble">
+    <Image src={optimizedImage.src} height="150" width="150" alt="Blaisy Records logo" />
+  </a>) : (
+
+
+<div class=`wrapper ${fixed ? 'fixed' : ''}` transition:name="bubble">
+  <Image src={optimizedImage.src} height="300" width="300" alt="Blaisy Records logo" />
+</div>
+  )}
+
+<style>
+  .wrapper {
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    height: 150px;
+    border-radius: 500px;
+    padding: 16px;
+  }
+  .wrapper.fixed {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
