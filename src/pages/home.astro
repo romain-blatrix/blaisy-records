@@ -45,9 +45,28 @@ import { fade } from "astro:transitions";
     height: 100%;
     gap: 40px;
   }
+
   nav a {
+    transition: scale 200ms ease-in-out;
     color: white;
     font-size: 50px;
     font-weight: 400;
+    text-decoration: none;
+  }
+
+  nav a::after {
+    content: "";
+    display: block;
+    width: 130%;
+    margin-left: -15%;
+    height: 2px;
+    background-color: white;
+    transition: width 200ms ease-in-out;
+    border-radius: 2px;
+  }
+
+  nav a:hover {
+    scale: 1.05;
+    transition: scale 200ms ease-in-out;
   }
 </style>

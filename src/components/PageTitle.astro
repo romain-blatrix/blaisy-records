@@ -1,0 +1,16 @@
+---
+import { fade } from "astro:transitions";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<h1 transition:animate={fade({ duration: "1s" })}>{title}</h1>
+
+<style>
+  h1 {
+    font-size: 66px;
+  }
+</style>

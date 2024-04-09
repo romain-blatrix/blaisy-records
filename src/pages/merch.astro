@@ -1,15 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { fade } from "astro:transitions";
 
 import LogoImage from "../components/LogoImage.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
 
 <Layout title="Blaisy Records" watermark>
   <main>
     <LogoImage fixed linkToHome />
 
-    <h1 transition:animate={fade({ duration: "1s" })}>Merch</h1>
+    <PageTitle title="Merch" />
   </main>
 </Layout>
 
