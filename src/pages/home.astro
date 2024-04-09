@@ -1,16 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { fade } from "astro:transitions";
+
+import logo from "../../public/logo.png";
+import { getImage } from "astro:assets";
+
+const optimizedImage = await getImage({
+  src: logo,
+  format: "webp",
+});
 ---
+
+<Fragment slot="head">
+  <link rel="preload" href={optimizedImage.src} as="image" />
+</Fragment>
 
 <Layout title="Blaisy Records">
   <main>
     <div class="wrapper">
-      <img
-        transition:name="bubble"
-        src="./logo.png"
-        alt="Blaisy Records logo"
-      />
+      <Image transition:name="bubble" src={logo} alt="Blaisy Records logo" />
     </div>
     <h1 transition:animate={fade({ duration: "1s" })}>
       - under construction -
