@@ -1,42 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Blaisy Records">
-	<main>
-		<video autoplay muted playsinline transition:name="hero" transition:animate="slide">
-			<source src="./BLAISY_PAYSAGE_Noir.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</main>
+  <main>
+    <video
+      autoplay
+      muted
+      playsinline
+      transition:name="bubble"
+      transition:animate="slide"
+    >
+      <source src="./anim.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </main>
 </Layout>
 
 <script>
-	import { navigate } from 'astro:transitions/client';
+  import { navigate } from "astro:transitions/client";
 
-	const video = document.querySelector("video");
+  const video = document.querySelector("video");
 
-	if(video) {
-		video.addEventListener("ended", () => {
-			navigate("/home", { history: 'push' });
-		});
-	}
+  if (video) {
+    video.addEventListener("ended", () => {
+      navigate("/home", { history: "push" });
+    });
+  }
 </script>
 
 <style>
-	main {
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	video {
-		background-color: white;
-		aspect-ratio: 1 / 1;
-		width: 75vw;
-		max-width: 500px;
-		max-height: 75vh;
-		border-radius: 500px;
-	}
+  main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    width: 75vw;
+    max-width: 500px;
+    max-height: 75vh;
+    border-radius: 500px;
+  }
 </style>
