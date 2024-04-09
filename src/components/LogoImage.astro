@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 import logo from "../../public/logo.png";
 import { getImage } from "astro:assets";
 
-const optimizedImage = await getImage({
+const optimizedLogo = await getImage({
   src: logo,
   format: "webp",
 });
@@ -18,17 +18,17 @@ const { fixed, linkToHome } = Astro.props;
 ---
 
 <Fragment slot="head">
-  <link rel="preload" href={optimizedImage.src} as="image" />
+  <link rel="preload" href={optimizedLogo.src} as="image" />
 </Fragment>
 
 {linkToHome ? (
   <a href="/home" class=`wrapper ${fixed ? 'fixed' : ''}` transition:name="bubble">
-    <Image src={optimizedImage.src} height="150" width="150" alt="Blaisy Records logo" />
+    <Image src={optimizedLogo.src} height="150" width="150" alt="Blaisy Records logo" />
   </a>) : (
 
 
 <div class=`wrapper ${fixed ? 'fixed' : ''}` transition:name="bubble">
-  <Image src={optimizedImage.src} height="300" width="300" alt="Blaisy Records logo" />
+  <Image src={optimizedLogo.src} height="300" width="300" alt="Blaisy Records logo" />
 </div>
   )}
 

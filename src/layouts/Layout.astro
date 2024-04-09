@@ -1,12 +1,21 @@
 ---
+import { getImage } from "astro:assets";
 import "@fontsource/monoton";
 import "@fontsource/roboto";
 import { ViewTransitions } from "astro:transitions";
+
+import logo from "../../public/logo.png";
+import logoText from "../../public/logo_text_darken.png";
 
 interface Props {
   title: string;
   watermark?: boolean;
 }
+
+const optimizedLogoText = await getImage({
+  src: logoText,
+  format: "webp",
+});
 
 const { title, watermark } = Astro.props;
 
@@ -24,6 +33,7 @@ const logoClass = watermark ? "watermark" : "";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <link rel="preload" href={optimizedLogoText.src} as="image" />
     <slot name="head" />
   </head>
   <body class={logoClass}>
