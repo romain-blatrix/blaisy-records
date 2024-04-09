@@ -1,7 +1,7 @@
 ---
 import "@fontsource/monoton";
+import "@fontsource/roboto";
 import { ViewTransitions } from "astro:transitions";
-import logo from "../../public/logo.png";
 
 interface Props {
   title: string;
@@ -37,8 +37,7 @@ const logoClass = watermark ? "watermark" : "";
         height: 100%;
       }
       html {
-        font-family: system-ui, sans-serif;
-        background: #ffffff;
+        font-family: "Monoton", sans-serif;
         box-sizing: border-box;
       }
       body {
@@ -46,7 +45,7 @@ const logoClass = watermark ? "watermark" : "";
         padding: 5vh 5vw;
 
         background: black;
-        font-family: "Monoton", sans-serif;
+        color: #eaeaea;
         -webkit-font-smoothing: antialiased;
         -moz-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -70,6 +69,10 @@ const logoClass = watermark ? "watermark" : "";
       }
       a {
         color: white;
+      }
+
+      section {
+        font-family: "Roboto", sans-serif;
       }
     </style>
   </body>
